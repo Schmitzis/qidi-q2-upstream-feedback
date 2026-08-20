@@ -33,6 +33,22 @@ build (like n3oney/qidi-q2-klipper's, which this installer is clearly
 designed to target) will hit this on their first real print with a
 tool-change in it.
 
+## Second real gap: shipped BOX 2 (dual-box) template has bugs, plus a hardware limit worth documenting
+
+The installer's generated `mmu_hardware.cfg` already ships full "BOX 2"
+sections, commented out, for anyone adding a second physical Box unit —
+a nice touch, but we found two real bugs in that template (a
+gear-stepper naming mismatch that undercounts gates entirely, and a
+copy-paste bug in `box2_board_fan`'s stepper list) while actually wiring
+up a second box. There's also a third thing that isn't a bug at all but
+cost real debugging time before we understood it: if the two boxes are
+chained through Qidi's official multi-box Hub, only whichever box is
+physically *last* in the chain can use the shared Hub sensor for gate
+detection — Klipper's own cross-MCU homing restriction makes this
+unfixable in config for the other box(es). Full details, fixes, and
+verification in
+[install-bb-q2-camden-winder-dual-box.md](install-bb-q2-camden-winder-dual-box.md).
+
 ## Minor note: interactive installer automation
 
 Not a bug in the script, just an observation from trying to drive it

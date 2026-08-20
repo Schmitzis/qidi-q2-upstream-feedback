@@ -27,7 +27,8 @@ standalone (can be turned into an issue/PR against the relevant repo).
 | [happy-hare-bunnybox-kalico-compat.md](reports/happy-hare-bunnybox-kalico-compat.md) | Wazzup77/Happy-Hare (`bunnybox` branch) | **Real bug + fix**: `mmu_machine.py` breaks pressure advance on Kalico — two separate incompatibilities, both fixed and verified |
 | [n3oney-qidi-q2-klipper.md](reports/n3oney-qidi-q2-klipper.md) | n3oney/qidi-q2-klipper | Firmware/build notes: RFID crash + stub firmware patch, box driver binary reuse, extruder refactor compat gap |
 | [config-changes-mistersheikh.md](reports/config-changes-mistersheikh.md) | MisterSheikh/Qidi_Q2_Mainline_Klipper | Documentation gaps in `config_changes.md` found while following it end-to-end |
-| [install-bb-q2-camden-winder.md](reports/install-bb-q2-camden-winder.md) | Camden-Winder/Qidi-Q2-superuser | Installer experience notes, one real gap (Kalico compat, links to the Happy Hare report) |
+| [install-bb-q2-camden-winder.md](reports/install-bb-q2-camden-winder.md) | Camden-Winder/Qidi-Q2-superuser | Installer experience notes, two real gaps (Kalico compat + dual-box template bugs, links to dedicated reports) |
+| [install-bb-q2-camden-winder-dual-box.md](reports/install-bb-q2-camden-winder-dual-box.md) | Camden-Winder/Qidi-Q2-superuser + Wazzup77/Happy-Hare | **Real bugs + fix**: shipped BOX 2 template has a gear-stepper naming bug and a copy-paste fan-wiring bug; plus a documented hardware limit (Qidi's official multi-box Hub sensor only reachable from the last box in the daisy chain — unfixable via Klipper's cross-MCU homing model) |
 | [helixscreen.md](reports/helixscreen.md) | prestonbrown/helixscreen | Install experience, one open question (touch input dependency) |
 | [orcaslicer-qidi-vendor-profile.md](reports/orcaslicer-qidi-vendor-profile.md) | OrcaSlicer / Qidi vendor profile | `use_3mf` inheritance breaks generic Klipper/Moonraker connections for Qidi-profile-derived printers |
 
